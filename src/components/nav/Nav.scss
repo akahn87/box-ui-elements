@@ -1,0 +1,84 @@
+/* Nav Menu */
+@import '../../styles/variables';
+
+.bdl-Nav {
+    padding: 8px 0;
+    color: $white;
+}
+
+.bdl-Nav-item {
+    position: relative;
+    display: flex;
+    height: 40px;
+    margin: 0 12px;
+    padding: 0 12px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-decoration: none;
+    background-color: $bdl-box-blue;
+    border-radius: 8px;
+    opacity: .85;
+    transition: background-color .15s ease;
+    will-change: background-color;
+}
+
+.bdl-Nav-item--active,
+.bdl-Nav-item:hover {
+    opacity: 1;
+}
+
+.bdl-Nav-item--active {
+    background-color: hsl(213, 100%, 37%);
+}
+
+.bdl-Nav-item:hover {
+    background-color: hsl(213, 100%, 47%);
+    opacity: 1;
+}
+
+.bdl-Nav-text {
+    flex: 1;
+}
+
+.bdl-Nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    line-height: 44px;
+    text-align: center;
+}
+
+.bdl-Nav-icon .fill-color {
+    fill: $white;
+}
+
+.bdl-Nav-item .bdl-Nav-icon:first-child {
+    margin-right: 16px;
+}
+
+.bdl-Nav-item .bdl-Nav-icon:last-child {
+    margin-left: 16px;
+}
+
+@media screen and (max-width: 992px) {
+    .bdl-Nav-text {
+        opacity: 0;
+        transition: opacity .15s ease;
+        will-change: opacity;
+    }
+
+    .bdl-Nav-collections .bdl-Nav-icon {
+        opacity: 0;
+        transition: opacity .15s ease;
+        will-change: opacity;
+    }
+
+    .bdl-Sidebar.is-expanded .bdl-Nav-text {
+        opacity: .85;
+    }
+
+    .bdl-Sidebar.is-expanded .bdl-Nav-collections .bdl-Nav-icon {
+        opacity: .85;
+    }
+}

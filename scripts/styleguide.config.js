@@ -72,6 +72,7 @@ const allSections = [
             '../src/components/modal/Modal.js',
             '../src/components/modal/ModalActions.js',
             '../src/components/modal/ModalDialog.js',
+            '../src/components/nav/Nav.js',
             '../src/components/nav-sidebar/NavSidebar.js',
             '../src/components/notification/Notification.js',
             '../src/components/notification/NotificationsWrapper.js',
